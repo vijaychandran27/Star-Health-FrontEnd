@@ -1,12 +1,61 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Frontend - Dynamic Form Application
+This is the frontend for the Dynamic Form Application. It is built with React and handles user interactions, form submissions, and data validations. Users can fill out personal details, upload a salary slip (for incomes above 50,000), and submit the data to the backend.
 
-Currently, two official plugins are available:
+Features
+Dynamic Form: Form fields dynamically adapt based on the user’s input.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Salary Slip Upload: Upload functionality for salary slip when annual income exceeds 50,000.
 
-## Expanding the ESLint configuration
+Form Validation: Required fields and percentage validation for members.
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Responsive UI: Built with Ant Design components for a smooth user experience.
+
+Prerequisites
+Before running the frontend application, ensure that you have the following installed on your system:
+
+Node.js (v14.x or higher)
+
+npm (Node Package Manager)
+
+Installation & Setup
+Clone the repository:
+
+git clone https://github.com/your-username/repository-name.git
+cd repository-name/frontend
+
+Install dependencies:
+
+Install the required dependencies using npm:
+
+npm install
+
+Environment Variables:
+
+Create a .env file in the root of the frontend directory and add the following environment variable:
+
+VITE_API_URL=http://localhost:5000/api
+
+Replace the VITE_API_URL with your backend API URL.
+
+Run the development server:
+
+Start the development server with:
+
+npm run dev
+The app will be available at http://localhost:5173.
+
+Project Structure
+src/components: Contains reusable components like SelectField, RadioGroup, SalarySlipUpload, etc.
+
+src/App.jsx: Main application file where form logic and state management reside.
+
+src/utils: Utility functions (e.g., API call handling).
+
+Additional Information
+Form Data Submission: On form submission, the frontend validates the form and sends data to the backend via the axios POST request.
+
+Salary Slip Upload: The salary slip is uploaded only if the user's annual income exceeds 50,000. If uploaded, the backend stores the file.
+
+
