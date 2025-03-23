@@ -20,10 +20,6 @@ Node.js (v14.x or higher)
 npm (Node Package Manager)
 
 Installation & Setup
-Clone the repository:
-
-git clone https://github.com/your-username/repository-name.git
-cd repository-name/frontend
 
 Install dependencies:
 
